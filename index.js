@@ -49,7 +49,7 @@ aeApp.directive('loginEjs', function ($compile) {
     }
 
     return {
-        restrict: "A",
+        restrict: "E",
         link: linker
     };
 });
