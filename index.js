@@ -104,8 +104,8 @@ aeApp.controller('loginController', ['$scope', '$http', '$location', 'soybeanMod
 aeApp.controller('soybeanController', ['$scope', 'soybeanModel', function ($scope, soybeanModel) {
     $scope.soybean = soybeanModel.getSoybean();
 
-    $scope.click = function (movie) {
-        if (movie.checked) {
+    $scope.click = function (soybean) {
+        if (soybean.checked) {
         }
     };
 
