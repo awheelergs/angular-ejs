@@ -1,0 +1,14 @@
+<div class="jumbotron text-center">
+  <h1>Top 5 Soybean Exporting Countries</h1>
+  <table>
+  <thead>
+    <tr><th>Country</th><th>Million Metric Tons</th></tr>
+  </thead>
+    <tbody>
+      <tr ng-repeat="soy in soybean">
+        <td>{{ soy.country }}</td>
+        <td>{{ soy.mmt }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

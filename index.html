@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular EJS Example</title>
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="style.css"/>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+    <script src="http://embeddedjavascript.googlecode.com/files/ejs_0.9_alpha_1_production.js"></script>
+    <script src="index.js"></script>
+    
+  </head>
+  <body ng-app="aeApp">
+
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Angular EJS Example</a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+            <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+            <li><a href="#login"><i class="fa fa-user"></i> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="main" ng-controller="homeController">
+      <div ng-view></div>
+    </div>
+    
+  </body>
+</html>
