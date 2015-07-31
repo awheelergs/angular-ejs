@@ -40,16 +40,17 @@ aeApp.config(function ($routeProvider, $locationProvider) {
 /* See https://docs.angularjs.org/api/ng/service/$compile
    and http://onehungrymind.com/angularjs-dynamic-templates/ */
 aeApp.directive('loginEjs', function ($compile) {
-    var ejs = new EJS({url: '/view/login.ejs'});
-
-    var linker = function (scope, element, attrs) {
+    var ejs = new EJS({url: '/view/login.ejs'}),
+        linker;
+    
+    linker = function (scope, element, attrs) {
         var data = {soybean: scope.soybean};
         element.html(ejs.render(data));
         $compile(element.contents())(scope);
-    }
+    };
 
     return {
-        restrict: "E",
+        restrict: 'E',
         link: linker
     };
 });
